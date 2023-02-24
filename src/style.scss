@@ -1,0 +1,30 @@
+$prim_color: brown;
+$sec_color: beige;
+$hero_color: white;
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    grid-template-rows: auto;
+
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.brand-name {
+    width: 64px;
+    height: 64px;
+}
+
+#content {
+    border: 1px solid black;
+    grid-column: 2;
+}
