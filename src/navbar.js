@@ -19,6 +19,7 @@ let createNavBar = () => {
     navBar.appendChild(menuButton);
 
     let barName = document.createElement("h1");
+    barName.className = "bar-name"
     barName.innerHTML = "Annie's Winebar";
     mainDiv.appendChild(barName);
 }
