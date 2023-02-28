@@ -1,8 +1,9 @@
 $hero_color: rgb(239,235,224);
-$bg_color: rgb(166,169,152);
+$bg_color: white;
 $ft_color: rgb(107, 99, 99);
 $header_color: #4b371c;
 $paragraph_color: rgb(150, 150, 150);
+$content_color: rgb(117, 121, 99);
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
@@ -12,19 +13,38 @@ body {
     margin: 0px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 300px auto 300px;
+    grid-template-columns: minmax(0, 300px) auto minmax(0, 300px);
     grid-template-rows: auto;
     font-family: "Roboto", sans-serif;
 }
 
+button {
+    width: 100px;
+    height: 30px;
+    border-radius: 1rem;
+    background-color: $bg_color;
+    color: $header_color;
+    font-size: 18px;
+    border: 0px solid black;
+    cursor: pointer;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
 #content {
     background-color: $hero_color;
-    border: 1px solid black;
     grid-column: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 33px -1px rgba(0,0,0,0.7);
 }
 
 .bar-name {
@@ -50,30 +70,49 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 .home-page-pictures {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 0.5rem;
+    border-radius: 12em;
 }
 
 .frame-left {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
+    background-color: $content_color;
+    color: $bg_color;
     margin: 2rem;
-
+    padding: 0.25rem;
+    border: 1px solid $paragraph_color;
+    border-radius: 2em;
+    box-shadow: 0px 0px 33px -1px rgba(0,0,0,0.7);
 }
 
 .frame-right {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
+    background-color: $content_color;
+    color: $bg_color;
     margin: 2rem;
+    padding: 0.25rem;
+    border: 1px solid $paragraph_color;
+    border-radius: 2em;
+    box-shadow: 0px 0px 33px -1px rgba(0,0,0,0.7);
+}
+
+.text-holder {
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 footer {
@@ -81,4 +120,18 @@ footer {
     margin-top: auto;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapouter {
+margin-top: 2rem;
+}
+
+a {
+    text-decoration: none;
+    margin: 2rem;
+    font-size: 18px;
+    color:$bg_color;
 }

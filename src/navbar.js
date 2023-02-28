@@ -1,4 +1,6 @@
 import { mainDiv } from "./index.js";
+import { removeFrame } from "./home_page.js";
+import { createMenuHeader } from "./menu";
 
 let createNavBar = () => {
     let navBar = document.createElement("nav");
@@ -22,6 +24,19 @@ let createNavBar = () => {
     barName.className = "bar-name"
     barName.innerHTML = "Annie's Winebar";
     mainDiv.appendChild(barName);
+
+    navBarFunc(menuButton,contactButton)
+}
+
+let navBarFunc = (menuBut, contactBut) => {
+    menuBut.addEventListener("click", () => {
+        console.log(`${menuBut} works!`)
+        removeFrame()
+        createMenuHeader();
+    })
+    contactBut.addEventListener("click", () => {
+        console.log(`${contactBut} works!`)
+    })
 }
 
 export {createNavBar}
