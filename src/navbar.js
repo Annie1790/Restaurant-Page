@@ -1,5 +1,5 @@
 import { mainDiv } from "./index.js";
-import { removeFrame } from "./home_page.js";
+import { removeHomeDoms } from "./home_page.js";
 import { createMenuHeader } from "./menu";
 
 let createNavBar = () => {
@@ -31,7 +31,7 @@ let createNavBar = () => {
 let navBarFunc = (menuBut, contactBut) => {
     menuBut.addEventListener("click", () => {
         console.log(`${menuBut} works!`)
-        removeFrame()
+        removeHomeDoms(mainDiv)
         createMenuHeader();
     })
     contactBut.addEventListener("click", () => {

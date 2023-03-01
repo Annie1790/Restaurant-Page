@@ -1,8 +1,7 @@
-import { mainDiv } from ".";
 
 let homePageIntroduction = document.createElement("div");
 let content = document.createElement("div");
-
+let footer = document.createElement("footer");
 
 export let createHomePage = (mainDiv) => {
     homePageIntroduction.className = "home-page-introduction"
@@ -18,9 +17,6 @@ export let createHomePage = (mainDiv) => {
     homePageIntroduction.appendChild(introductionText);
 }
 
-export let removeFrame = () => {
-    mainDiv.removeChild(content)
-}
 export let createFrame = (mainDiv,className, image, header, paragraph) => {
     let frame = document.createElement("div");
     frame.className = `${className}`;
@@ -45,8 +41,6 @@ export let createFrame = (mainDiv,className, image, header, paragraph) => {
     textHolder.appendChild(textParagraph);
 }
 
-let footer = document.createElement("footer");
-
 export let createFooter = (mainDiv) => {
     mainDiv.append(footer);
 
@@ -54,4 +48,22 @@ export let createFooter = (mainDiv) => {
     anchor1.innerHTML = "My GitHub";
     anchor1.href = "https://github.com/Annie1790";
     footer.appendChild(anchor1)
+}
+
+let removeIntro = (mainDiv) => {
+    mainDiv.removeChild(homePageIntroduction)
+}
+
+let removeFooter = (mainDiv) => {
+    mainDiv.removeChild(footer)
+}
+
+ let removeFrame = (mainDiv) => {
+    mainDiv.removeChild(content)
+}
+
+export let removeHomeDoms = (mainDiv) => {
+removeIntro(mainDiv)
+removeFrame(mainDiv)
+removeFooter(mainDiv)
 }
