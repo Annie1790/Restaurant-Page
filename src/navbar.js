@@ -1,9 +1,9 @@
+import { navBarFunc } from "./button_functions.js";
 import { mainDiv } from "./index.js";
-import { removeHomeDoms } from "./home_page.js";
-import { createMenuHeader } from "./menu";
 
-let createNavBar = () => {
-    let navBar = document.createElement("nav");
+let navBar = document.createElement("nav");
+
+let createNavBar = (mainDiv) => {
     navBar.className = "navigation-bar"
     mainDiv.appendChild(navBar);
 
@@ -28,15 +28,9 @@ let createNavBar = () => {
     navBarFunc(menuButton,contactButton)
 }
 
-let navBarFunc = (menuBut, contactBut) => {
-    menuBut.addEventListener("click", () => {
-        console.log(`${menuBut} works!`)
-        removeHomeDoms(mainDiv)
-        createMenuHeader();
-    })
-    contactBut.addEventListener("click", () => {
-        console.log(`${contactBut} works!`)
-    })
+let removeNavBar = (mainDiv) => {
+    mainDiv.removeChild(navBar)
 }
 
-export {createNavBar}
+
+export {createNavBar, removeNavBar}

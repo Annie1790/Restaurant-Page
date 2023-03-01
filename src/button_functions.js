@@ -1,13 +1,17 @@
+import { removeHomeDoms } from "./home_page.js";
+import { createWineMenu } from "./menu.js";
 import { mainDiv } from "./index.js";
-import { removeHomeDom } from "./home_page.js";
-import { createMenuHeader } from "./menu.js";
 
-export let navBarFunc = (menuBut, contactBut) => {
+let navBarFunc = (menuBut, contactBut) => {
     menuBut.addEventListener("click", () => {
-        removeNavBar(mainDiv)
-        removeHomeDom(mainDiv);
-        createMenuHeader();
+        console.log(`${menuBut} works!`)
+        removeHomeDoms(mainDiv)
+        createWineMenu(mainDiv)
     })
     contactBut.addEventListener("click", () => {
+        console.log(`${contactBut} works!`)
     })
 }
+
+export {navBarFunc};
+

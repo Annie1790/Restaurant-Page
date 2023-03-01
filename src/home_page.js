@@ -1,7 +1,7 @@
 
 let homePageIntroduction = document.createElement("div");
 let content = document.createElement("div");
-let footer = document.createElement("footer");
+export let footer = document.createElement("footer");
 
 export let createHomePage = (mainDiv) => {
     homePageIntroduction.className = "home-page-introduction"
