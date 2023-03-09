@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Restaurant-Page/static/css/main.facf8b0c.css",
+    "main.js": "/Restaurant-Page/static/js/main.e40b6554.js",
+    "static/media/venue.jpg": "/Restaurant-Page/static/media/venue.55735cc8c269ee2a8f6e.jpg",
+    "static/media/wine.jpg": "/Restaurant-Page/static/media/wine.a2d774502769e37586f8.jpg",
+    "static/media/charcuterie.jpg": "/Restaurant-Page/static/media/charcuterie.ddad0bfcf30dc68a471e.jpg",
+    "static/media/brand_logo.svg": "/Restaurant-Page/static/media/brand_logo.b6a42c15e3ba5526734e8bd467690daf.svg",
+    "index.html": "/Restaurant-Page/index.html",
+    "main.facf8b0c.css.map": "/Restaurant-Page/static/css/main.facf8b0c.css.map",
+    "main.e40b6554.js.map": "/Restaurant-Page/static/js/main.e40b6554.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.facf8b0c.css",
+    "static/js/main.e40b6554.js"
+  ]
+}
